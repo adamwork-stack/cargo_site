@@ -145,9 +145,17 @@ h1, h2, h3 {
 
 .hero-image {
   width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: 15% 25%;
   border-radius: 4px;
-  filter: grayscale(20%);
 }
+
+.hero-image--flowers {
+  object-position: 20% 30%;
+}
+
+/* Desktop.png part-by-part: hero shows flower illustration area (top-left region) */
 
 .location {
   margin-top: 0.75rem;
@@ -225,15 +233,20 @@ h1, h2, h3 {
   overflow: hidden;
 }
 
-.story-card.card-photo img {
+.story-card.card-photo img.card-img-part {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: grayscale(100%);
-  opacity: 0.4;
+  opacity: 0.5;
 }
+
+/* Desktop.png part-by-part: each card shows different region */
+.card-img-part--1 { object-position: 75% 65%; }
+.card-img-part--2 { object-position: 50% 55%; }
+.card-img-part--3 { object-position: 25% 70%; }
 
 .story-card.card-photo .card-category,
 .story-card.card-photo .card-title,
@@ -359,6 +372,35 @@ h1, h2, h3 {
   border-radius: 4px;
   aspect-ratio: 16/9;
   object-fit: cover;
+  object-position: 50% 18%;
+}
+
+.article-img-part {
+  object-fit: cover;
+}
+
+.article-img-part--hero {
+  object-position: 50% 18%;
+}
+
+.article-img-part--hands {
+  object-position: 85% 72%;
+}
+
+.article-img-part--framed1 {
+  object-position: 40% 38%;
+}
+
+.article-img-part--framed2 {
+  object-position: 60% 58%;
+}
+
+.article-img-part--vertical {
+  object-position: 78% 72%;
+}
+
+.article-img-part--author {
+  object-position: 52% 88%;
 }
 
 .article-overlay-img {
@@ -368,6 +410,7 @@ h1, h2, h3 {
   width: 180px;
   height: 240px;
   object-fit: cover;
+  object-position: 85% 72%;
   border-radius: 4px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
@@ -397,6 +440,8 @@ h1, h2, h3 {
 }
 
 .article-figure--framed img {
+  width: 100%;
+  height: 280px;
   border: 3px solid var(--yellow);
   border-radius: 4px;
 }
@@ -457,7 +502,15 @@ h1, h2, h3 {
   width: 100%;
   height: 320px;
   object-fit: cover;
+  object-position: 78% 72%;
   border-radius: 4px;
+}
+
+.author-photo.article-img-part {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: 52% 88%;
 }
 
 /* --- Author Bio --- */
